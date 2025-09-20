@@ -13,7 +13,7 @@ const connectDB = async () => {
     
     // Provide helpful error message
     if (error.code === 'ECONNREFUSED') {
-      console.log('\n⚠️  MongoDB is not running. Please:');
+      console.log('\n  MongoDB is not running. Please:');
       console.log('1. Install MongoDB locally, OR');
       console.log('2. Use MongoDB Atlas (cloud), OR');
       console.log('3. Start MongoDB service if already installed');
