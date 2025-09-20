@@ -1,6 +1,6 @@
-const express = require('express');
-const Url = require('../models/Url');
-const shortid = require('shortid');
+import express from 'express';
+import Url from '../models/Url.js';
+import shortid from 'shortid';
 
 const router = express.Router();
 
@@ -63,4 +63,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
