@@ -1,12 +1,88 @@
-# React + Vite
+# 🔗 URL Shortener
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fullstack URL shortener application that converts long URLs into short, shareable links.  
+Built with **Node.js, Express.js, MongoDB, React**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Shorten long URLs into custom short links.
+- Redirect short URLs to original URLs.
+- Track number of clicks.
+- REST API for URL shortening.
+- Responsive frontend interface.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+**Frontend:** React, HTML, CSS, Tailwind  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB  
+**Other Tools:** Postman, Git, GitHub  
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/AbhishekSardar05/1000017750.git
+cd 1000017750
+```
+
+### 2. Backend Setup
+```bash
+cd server
+npm install
+npm run dev
+```
+
+### 3. Frontend Setup
+```bash
+cd client
+npm install
+npm run dev
+```
+
+### 4. Environment Variables
+Create a `.env` file in `server/` with the following:
+```
+CLIENT_PORT = <your_react_app_port>  #eg.5173 
+DATABASE_URL = <your_mongoDb_database_string>
+```
+
+Create a `.env` file in `client/` with the following:
+```
+VITE_API_URL = <your_backend_api> #eg.http://localhost:5000
+VITE_CLIENT_URL = <your_client_url> #eg.http://localhost:3000
+```
+---
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage](../frontend/src/assets/Home.png)
+
+### Statistics Page
+![Statistics Page](../frontend/src/assets/function.png)
+
+
+---
+
+## 📡 API Endpoints
+
+### 1. Shorten URL
+`POST /shorturls`
+```json
+{
+  "url": "https://www.example.com",
+  "validity": 10, // in minutes (eg.10)
+  "shortcode": "mycode"
+}
+```
+
+## Shorten URL API TESTING
+![Shorten URL API TESTING](../frontend/src/assets/postRoutecheck.png)
+
+
+
